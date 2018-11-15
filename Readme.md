@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Converter.cs](./CS/FilteringWithComboBoxEditor/Converter.cs) (VB: [Converter.vb](./VB/FilteringWithComboBoxEditor/Converter.vb))
+* [Data.cs](./CS/FilteringWithComboBoxEditor/Data.cs) (VB: [Data.vb](./VB/FilteringWithComboBoxEditor/Data.vb))
+* [MainWindow.xaml](./CS/FilteringWithComboBoxEditor/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/FilteringWithComboBoxEditor/MainWindow.xaml.vb))
+* [MainWindow.xaml.cs](./CS/FilteringWithComboBoxEditor/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/FilteringWithComboBoxEditor/MainWindow.xaml.vb))
+<!-- default file list end -->
 # How to use sorting and filtering with a custom object
 
 
