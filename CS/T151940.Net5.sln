@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteringWithComboBoxEditor", "FilteringWithComboBoxEditor\FilteringWithComboBoxEditor.csproj", "{2C48D9C1-70B5-47E2-98A0-0B62CD29E3F0}"
+# Visual Studio 16
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteringWithComboBoxEditor", "FilteringWithComboBoxEditor\FilteringWithComboBoxEditor.Net5.csproj", "{2C48D9C1-70B5-47E2-98A0-0B62CD29E3F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
