@@ -4,107 +4,107 @@ Imports System.Linq
 Imports System.Text
 
 Namespace FilteringWithComboBoxEditor
-    Public Class Data
-        Public Shared ReadOnly Property DataList() As List(Of Element)
-            Get
-                Dim list As List(Of Element) = New List(Of Element)(New Element() { _
-                    New Element() With { _
-                        .Name="elem1", _
-                        .Value = New ElementItem() With { _
-                            .ItemId=0, _
-                            .ItemName="alfa" _
-                        } _
-                    }, _
-                    New Element() With { _
-                        .Name="elem2", _
-                        .Value = New ElementItem() With { _
-                            .ItemId=0, _
-                            .ItemName="beta" _
-                        } _
-                    }, _
-                    New Element() With { _
-                        .Name="elem3", _
-                        .Value = New ElementItem() With { _
-                            .ItemId=0, _
-                            .ItemName="gamma" _
-                        } _
-                    }, _
-                    New Element() With { _
-                        .Name="elem4", _
-                        .Value = New ElementItem() With { _
-                            .ItemId=0, _
-                            .ItemName="omega" _
-                        } _
-                    }, _
-                    New Element() With { _
-                        .Name="elem5", _
-                        .Value = New ElementItem() With { _
-                            .ItemId=0, _
-                            .ItemName="lambda" _
-                        } _
-                    }, _
-                    New Element() With { _
-                        .Name="elem6", _
-                        .Value = New ElementItem() With { _
-                            .ItemId=0, _
-                            .ItemName="fi" _
-                        } _
-                    }, _
-                    New Element() With { _
-                        .Name="elem7", _
-                        .Value = New ElementItem() With { _
-                            .ItemId=0, _
-                            .ItemName="xi" _
-                        } _
-                    }, _
-                    New Element() With { _
-                        .Name="elem8", _
-                        .Value = New ElementItem() With { _
-                            .ItemId=0, _
-                            .ItemName="pi" _
-                        } _
-                    }, _
-                    New Element() With { _
-                        .Name="elem9", _
-                        .Value = New ElementItem() With { _
-                            .ItemId=0, _
-                            .ItemName="ro" _
-                        } _
-                    }, _
-                    New Element() With { _
-                        .Name="elem0", _
-                        .Value = New ElementItem() With { _
-                            .ItemId=0, _
-                            .ItemName="sigma" _
-                        } _
-                    } _
-                })
-                For Each elem In list
-                    Dim avaliableValues As New List(Of ElementItem)()
-                    avaliableValues.Add(elem.Value)
-                    For i As Integer = 0 To 4
-                        avaliableValues.Add(New ElementItem() With { _
-                            .ItemName = elem.Value.ItemName & i, _
-                            .ItemId = i _
-                        })
-                    Next i
-                    elem.AvaliableValues = avaliableValues
-                Next elem
+	Public Class Data
+		Public Shared ReadOnly Property DataList() As List(Of Element)
+			Get
+				Dim list As New List(Of Element)(New Element() {
+					New Element() With {
+						.Name="elem1",
+						.Value = New ElementItem() With {
+							.ItemId=0,
+							.ItemName="alfa"
+						}
+					},
+					New Element() With {
+						.Name="elem2",
+						.Value = New ElementItem() With {
+							.ItemId=0,
+							.ItemName="beta"
+						}
+					},
+					New Element() With {
+						.Name="elem3",
+						.Value = New ElementItem() With {
+							.ItemId=0,
+							.ItemName="gamma"
+						}
+					},
+					New Element() With {
+						.Name="elem4",
+						.Value = New ElementItem() With {
+							.ItemId=0,
+							.ItemName="omega"
+						}
+					},
+					New Element() With {
+						.Name="elem5",
+						.Value = New ElementItem() With {
+							.ItemId=0,
+							.ItemName="lambda"
+						}
+					},
+					New Element() With {
+						.Name="elem6",
+						.Value = New ElementItem() With {
+							.ItemId=0,
+							.ItemName="fi"
+						}
+					},
+					New Element() With {
+						.Name="elem7",
+						.Value = New ElementItem() With {
+							.ItemId=0,
+							.ItemName="xi"
+						}
+					},
+					New Element() With {
+						.Name="elem8",
+						.Value = New ElementItem() With {
+							.ItemId=0,
+							.ItemName="pi"
+						}
+					},
+					New Element() With {
+						.Name="elem9",
+						.Value = New ElementItem() With {
+							.ItemId=0,
+							.ItemName="ro"
+						}
+					},
+					New Element() With {
+						.Name="elem0",
+						.Value = New ElementItem() With {
+							.ItemId=0,
+							.ItemName="sigma"
+						}
+					}
+				})
+				For Each elem In list
+					Dim avaliableValues As New List(Of ElementItem)()
+					avaliableValues.Add(elem.Value)
+					For i As Integer = 0 To 4
+						avaliableValues.Add(New ElementItem() With {
+							.ItemName = elem.Value.ItemName & i,
+							.ItemId = i
+						})
+					Next i
+					elem.AvaliableValues = avaliableValues
+				Next elem
 
-                Return list
-            End Get
-        End Property
-    End Class
+				Return list
+			End Get
+		End Property
+	End Class
 
-    Public Class Element
-        Public Property Name() As String
-        Public Property Value() As ElementItem
-        Public Property AvaliableValues() As List(Of ElementItem)
-    End Class
+	Public Class Element
+		Public Property Name() As String
+		Public Property Value() As ElementItem
+		Public Property AvaliableValues() As List(Of ElementItem)
+	End Class
 
-    Public Class ElementItem
-        Public Property ItemName() As String
-        Public Property ItemId() As Integer
-    End Class
+	Public Class ElementItem
+		Public Property ItemName() As String
+		Public Property ItemId() As Integer
+	End Class
 
 End Namespace
